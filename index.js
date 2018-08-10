@@ -7,14 +7,6 @@ const {
 	error
 } = console
 
-const REGEX = `/Order Approving a Proposed Rule Change|Order Granting Approval of a Proposed Rule Change|Order Granting Accelerated Approval of a Proposed Rule Change/`
-
-// Approved:
-// Contains (“proshares” and “bitcoin) and (“approval” or “approving”)
-
-// Denied:
-// Contains (“proshares” and “bitcoin) and (“disapprove” or disapproving”)
-
 async function main() {
 	try {
 		const options = {
@@ -30,7 +22,6 @@ async function main() {
 		} else {
 			log('Nothing matches for approval or disapproval.')
 		}
-		// dir($('#result-1').html())
 	} catch (e) {
 		error(e)
 	}

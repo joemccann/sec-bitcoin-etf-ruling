@@ -1,11 +1,15 @@
 const cheerio = require('cheerio')
 const rp = require('request-promise')
-const SEC_URL = 'https://secsearch.sec.gov/search/docs?utf8=%E2%9C%93&affiliate=secsearch&sort_by=&dc=655&query=proshares+bitcoin'
+const moment = require('moment')
+const today = moment().format('MM/DD/YYYY')
+const SEC_URL = `https://secsearch.sec.gov/search/docs?utf8=%E2%9C%93&affiliate=secsearch&since_date=${today}&dc=655&query=proshares+bitcoin`
 const {
 	log,
 	dir,
 	error
 } = console
+
+log(SEC_URL); 
 
 async function main() {
 	try {

@@ -13,6 +13,7 @@
 	"dependencies": {
 		"cheerio": "^1.0.0-rc.2",
 		"crawler-request": "^1.2.2",
+		"moment": "^2.22.2",
 		"pdf-parse": "^1.0.8",
 		"request": "^2.88.0",
 		"request-promise": "^4.2.2"
